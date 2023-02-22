@@ -6,3 +6,5 @@ gem 'rspec'
 gem "webrick", "~> 1.8"
 
 gem "jekyll", "~> 4.3"
+
+gem "jekyll-gist", "~> 1.5"
