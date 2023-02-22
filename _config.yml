@@ -7,14 +7,14 @@ permalink:        pretty
 relative_permalinks: false
 
 # Setup
-title:            Brandon Chaperon
+title:            brandon chaperon
 tagline:          'tagline'
-description:      'McGill Linguistics Grad Student'
+description:      'mcGill linguistics grad student'
 url:              https://bchap.ca
 baseurl:          /
 
 author:
-  name:           'Brandon Chaperon'
+  name:           'brandon chaperon'
   email:          'brandon [dot] chaperon [at] mail [dot] mcgill [dot] ca'
 
 paginate:         5
