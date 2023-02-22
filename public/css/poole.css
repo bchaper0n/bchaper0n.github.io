@@ -263,6 +263,14 @@ tbody tr:nth-child(odd) th {
   font-weight: 300;
 }
 
+.lead2 {
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: #f9f9f9;
+}
+
+
+
 
 /*
  * Messages

@@ -65,7 +65,7 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 21rem;
+    width: 23rem;
     text-align: left;
   }
 }
@@ -124,6 +124,7 @@ a.sidebar-nav-item:focus {
 .content {
   padding-top:    4rem;
   padding-bottom: 4rem;
+  padding-left: 5em;
 }
 
 @media (min-width: 48em) {
