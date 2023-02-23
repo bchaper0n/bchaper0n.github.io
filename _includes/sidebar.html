@@ -11,7 +11,8 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">home</a>
+      <a class="sidebar-nav-item{% if page.url == '' %} active{% endif %}" href="{{ site.baseurl }}">home</a>
+
       <a class="sidebar-nav-item" href="/cv">cv</a>
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
@@ -28,7 +29,7 @@
       {% endfor %}
     </nav>
 
-  
+
     <p>&copy; {{ site.time | date: '%Y' }}. all rights reserved.</p>
   </div>
 </div>
