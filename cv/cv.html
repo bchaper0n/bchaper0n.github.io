@@ -3,11 +3,10 @@ layout: page
 title: cv
 ---
 
-<embed id="cv_viewer" src="/docs/bchapcv.pdf" type="application/pdf">
+<embed id="cv_viewer" src="{{ site.baseurl }}docs/bchapcv.pdf" type="application/pdf">
 
 <script>
     function resizeCV(){
-        // your drawling code;
         var h = window.innerHeight - 150;
         
         var x = document.getElementById("cv_viewer");

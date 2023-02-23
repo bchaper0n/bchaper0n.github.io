@@ -11,16 +11,11 @@ title:            brandon chaperon
 tagline:          'tagline'
 description:      'mcgill linguistics grad student'
 url:              https://bchap.ca
-baseurl:          
+baseurl:          /
 
 author:
   name:           'brandon chaperon'
   email:          'brandon [dot] chaperon [at] mail [dot] mcgill [dot] ca'
 
-paginate:         5
-
 # Custom vars
 version:          2.1.0
-
-github:
-  repo:           https://github.com/poole/hyde
