@@ -1,0 +1,28 @@
+---
+layout: default
+title: cv
+---
+
+<embed id="cv_viewer" src="/docs/bchapcv.pdf" type="application/pdf">
+
+<script>
+    function resizeCV(){
+        // your drawling code;
+        var h = window.innerHeight - 150;
+        
+        var x = document.getElementById("cv_viewer");
+        x.style.height = h + "px";
+        x.style.width = "100%";
+    }
+
+    window.onresize = function(){
+        resizeCV();
+    }
+
+    window.onload = function(){
+        resizeCV(); // for onload 
+    }
+
+</script>
+<!-- <a href="{{ site.baseurl }}docs/bchapcv.pdf" download>download</a> -->
+
