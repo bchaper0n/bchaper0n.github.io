@@ -7,7 +7,7 @@
         </a>
       </h1>
       <p class="lead">{{ site.description }}</p>
-      <p class="lead2">brandon [dot] chaperon [at] mail [dot] mcgill [dot] ca</p>
+      <p class="lead2">{{ site.author.email }}</p>
     </div>
 
     <nav class="sidebar-nav">
@@ -26,11 +26,6 @@
           {% endif %}
         {% endif %}
       {% endfor %}
-
-      <!-- <a class="sidebar-nav-item" href="{{ site.baseurl }}research">Research</a> -->
-      <!-- <a class="sidebar-nav-item" href="{{ site.baseurl }}about">About</a> -->
-      <!-- <a class="sidebar-nav-item" href="{{ site.baseurl }}docs/bchapcv.pdf" download>cv</a> -->
-      <!-- <a class="sidebar-nav-item" href="{{ site.baseurl }}cv">cv</a> -->
     </nav>
 
     <p>&copy; {{ site.time | date: '%Y' }}. all rights reserved.</p>
