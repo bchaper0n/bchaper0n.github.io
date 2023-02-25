@@ -15,7 +15,9 @@ baseurl:          /
 
 author:
   name:           'brandon chaperon'
-  email:          'ac.lligcm.liam@norepahc.nodnarb'
+  email:          
+    name:         '@norepahc.nodnarb'
+    domain:       'ac.lligcm.liam'
 
 # Custom vars
 version:          2.1.0
