@@ -32,15 +32,17 @@
       <div class="container sidebar-sticky">
         <div class="sidebar-about">
           <h1>
-            <a href="../">
-              brandon chaperon
+            <a href="{{ site.baseurl }}">
+              {{ site.title }}
             </a>
           </h1>
-          <p class="lead">incoming mcgill linguistics grad student</p>
+          <p class="lead">{{ site.description }}</p>
+    
           <style type='text/css'>
             p span.displaynone { display:none; }
             </style>
-          <p class="lead2 unselectable" style="unicode-bidi: bidi-override; direction: rtl;">ac.lligcm.liam<span class='displaynone'>emerongi</span>@norepahc.nodnarb</p>
+    
+          <p class="lead2 unselectable" style="unicode-bidi: bidi-override; direction: rtl;">{{ site.author.email.domain }}<span class='displaynone'>emerongi</span>{{ site.author.email.name }}</p>
         </div>
 
         <nav class="sidebar-nav">
