@@ -10,9 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-    
       cv &middot; brandon chaperon
-    
   </title>
 
   <!-- CSS -->
@@ -28,82 +26,73 @@
   <!-- RSS -->
   <!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> -->
 </head>
-
-
   <body>
 
     <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>
-        <a href="../">
-          brandon chaperon
-        </a>
-      </h1>
-      <p class="lead">incoming mcgill linguistics grad student</p>
-      <style type='text/css'>
-        p span.displaynone { display:none; }
-        </style>
-      <p class="lead2 unselectable" style="unicode-bidi: bidi-override; direction: rtl;">ac.lligcm.liam<span class='displaynone'>emerongi</span>@norepahc.nodnarb</p>
+      <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+          <h1>
+            <a href="../">
+              brandon chaperon
+            </a>
+          </h1>
+          <p class="lead">incoming mcgill linguistics grad student</p>
+          <style type='text/css'>
+            p span.displaynone { display:none; }
+            </style>
+          <p class="lead2 unselectable" style="unicode-bidi: bidi-override; direction: rtl;">ac.lligcm.liam<span class='displaynone'>emerongi</span>@norepahc.nodnarb</p>
+        </div>
+
+        <nav class="sidebar-nav">
+          <a class="sidebar-nav-item" href="../">home</a>
+          <a class="sidebar-nav-item active" href="/cv/">cv</a>
+          <a class="sidebar-nav-item" href="/misc">misc</a>
+        </nav>
+
+        <p style="font-size: 15px;" id="lastUpdate"></p>
+    
+        <script>
+          const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              let repo = JSON.parse(this.responseText);
+              let lastUpdate = new Date(repo.pushed_at);
+              let date = months[lastUpdate.getMonth()] + " " + String(lastUpdate.getDate()) + " " + String(lastUpdate.getFullYear());
+              document.getElementById("lastUpdate").innerHTML = `last update on <em>${date}</em>`;
+            }
+          };
+          xhttp.open("GET", "https://api.github.com/repos/bchaper0n/bchaper0n.github.io", true);
+          xhttp.send();
+        </script>
+
+        <p style="margin-top: 50px; font-size: 12px;">&copy; 2023. all rights reserved.</p>
+      </div>
     </div>
-
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="../">home</a>
-
-      
-
-      
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
-            <a class="sidebar-nav-item active" href="/cv/">cv</a>
-          
-            <a class="sidebar-nav-item" href="/misc">misc</a>
-      
-    </nav>
-
-    <p style="margin-top: 50px; font-size: 12px;">&copy; 2023. all rights reserved.</p>
-  </div>
-</div>
-
 
     <div class="content container">
       <div class="page">
-  <embed id="cv_viewer" src="/docs/bchapcv.pdf" type="application/pdf">
+        <embed id="cv_viewer" src="/docs/bchapcv.pdf" type="application/pdf">
+        <script>
+            function resizeCV(){
+                var h = window.innerHeight - 150;
+                
+                var x = document.getElementById("cv_viewer");
+                x.style.height = h + "px";
+                x.style.width = "100%";
+            }
 
-<script>
-    function resizeCV(){
-        var h = window.innerHeight - 150;
-        
-        var x = document.getElementById("cv_viewer");
-        x.style.height = h + "px";
-        x.style.width = "100%";
-    }
+            window.onresize = function(){
+                resizeCV();
+            }
 
-    window.onresize = function(){
-        resizeCV();
-    }
+            window.onload = function(){
+                resizeCV(); // for onload 
+            }
 
-    window.onload = function(){
-        resizeCV(); // for onload 
-    }
-
-</script>
-<!-- <a href="/docs/bchapcv.pdf" download>download</a> -->
-
-
-</div>
-
+        </script>
+      <!-- <a href="/docs/bchapcv.pdf" download>download</a> -->
+      </div>
     </div>
 
   </body>

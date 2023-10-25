@@ -10,9 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
   <title>
-    
       misc &middot; brandon chaperon
-    
   </title>
 
   <!-- CSS -->
@@ -28,71 +26,58 @@
   <!-- RSS -->
   <!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> -->
 </head>
-
-
   <body>
 
     <div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <h1>
-        <a href="../">
-          brandon chaperon
-        </a>
-      </h1>
-      <p class="lead">incoming mcgill linguistics grad student</p>
-      <style type='text/css'>
-        p span.displaynone { display:none; }
-        </style>
-      <p class="lead2 unselectable" style="unicode-bidi: bidi-override; direction: rtl;">ac.lligcm.liam<span class='displaynone'>emerongi</span>@norepahc.nodnarb</p>
-    </div>
+      <div class="container sidebar-sticky">
+        <div class="sidebar-about">
+          <h1>
+            <a href="../">
+              brandon chaperon
+            </a>
+          </h1>
+          <p class="lead">incoming mcgill linguistics grad student</p>
+          <style type='text/css'>
+            p span.displaynone { display:none; }
+            </style>
+          <p class="lead2 unselectable" style="unicode-bidi: bidi-override; direction: rtl;">ac.lligcm.liam<span class='displaynone'>emerongi</span>@norepahc.nodnarb</p>
+        </div>
 
-    <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="../">home</a>
-
-      
-
-      
-      
-        
-          
-        
-      
-        
-      
-        
-          
-        
-      
-        
-          
+        <nav class="sidebar-nav">
+          <a class="sidebar-nav-item" href="../">home</a>
             <a class="sidebar-nav-item" href="/cv/">cv</a>
             <a class="sidebar-nav-item active" href="/misc/">misc</a>
-          
-        
-      
-    </nav>
+        </nav>
 
-    <p style="margin-top: 50px; font-size: 12px;">&copy; 2023. all rights reserved.</p>
-  </div>
-</div>
+        <p style="font-size: 15px;" id="lastUpdate"></p>
+    
+        <script>
+          const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              let repo = JSON.parse(this.responseText);
+              let lastUpdate = new Date(repo.pushed_at);
+              let date = months[lastUpdate.getMonth()] + " " + String(lastUpdate.getDate()) + " " + String(lastUpdate.getFullYear());
+              document.getElementById("lastUpdate").innerHTML = `last update on <em>${date}</em>`;
+            }
+          };
+          xhttp.open("GET", "https://api.github.com/repos/bchaper0n/bchaper0n.github.io", true);
+          xhttp.send();
+        </script>
 
+        <p style="margin-top: 50px; font-size: 12px;">&copy; 2023. all rights reserved.</p>
+      </div>
+    </div>
 
     <div class="content container">
       <div class="page">
-
         <ul>
-      <li>i have built and currently maintain the <a href="https://mull-lab.org/">mull lab website</a> and <a href="https://wiki.mull-lab.org/">igala wiki</a></li>
-      <li>here's a <a href="https://github.com/bchaper0n/igala-latex">python script</a> to convert glossed elicitation material to <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> (instructions included)</li>
-      <li>here's my <a href="https://www.overleaf.com/read/hsxhxvysqvbg"><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> template</a></li>
+          <li>i have built and currently maintain the <a href="https://mull-lab.org/">mull lab website</a> and <a href="https://wiki.mull-lab.org/">igala wiki</a></li>
+          <li>here's a <a href="https://github.com/bchaper0n/igala-latex">python script</a> to convert glossed elicitation material to <span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> (instructions included)</li>
+          <li>here's my <a href="https://www.overleaf.com/read/hsxhxvysqvbg"><span class="latex">L<sup>a</sup>T<sub>e</sub>X</span> template</a></li>
         </ul>
-    
-
-    
-
-
-</div>
-
+      </div>
     </div>
 
   </body>
