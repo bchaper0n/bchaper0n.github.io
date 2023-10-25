@@ -37,7 +37,7 @@
       {% endfor %}
     </nav>
 
-
+    <p id="lastUpdate"></p>
     
     <script>
       const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -47,7 +47,7 @@
           let repo = JSON.parse(this.responseText);
           let lastUpdate = new Date(repo.pushed_at);
           let date = months[lastUpdate.getMonth()] + " " + String(lastUpdate.getDate()) + " " + String(lastUpdate.getFullYear());
-          document.write(`<p>last update <em>${date}</em></p>`);
+          document.getElementById("lastUpdate").innerHTML = `last update <em>${date}</em>`;
         }
       };
       xhttp.open("GET", "https://api.github.com/repos/bchaper0n/bchaper0n.github.io", true);
