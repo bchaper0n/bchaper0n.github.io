@@ -38,6 +38,22 @@
     </nav>
 
 
+    
+    <script>
+      const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          let repo = JSON.parse(this.responseText);
+          let lastUpdate = new Date(repo.pushed_at);
+          let date = months[lastUpdate.getMonth()] + " " + String(lastUpdate.getDate()) + " " + String(lastUpdate.getFullYear());
+          document.write(`<p>last update <em>${date}</em></p>`);
+        }
+      };
+      xhttp.open("GET", "https://api.github.com/repos/bchaper0n/bchaper0n.github.io", true);
+      xhttp.send();
+      </script>
+    
     <p style="margin-top: 50px; font-size: 12px;">&copy; {{ site.time | date: '%Y' }}. all rights reserved.</p>
   </div>
 </div>
