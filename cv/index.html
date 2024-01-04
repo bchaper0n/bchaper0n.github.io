@@ -1,102 +1,28 @@
-<!DOCTYPE html>
-<html lang="en-us">
+---
+layout: default
+title: cv
+---
+<div class="content container">
+  <div class="page">
+    <embed id="cv_viewer" src="/docs/bchapcv.pdf" type="application/pdf">
+      <script>
+        function resizeCV(){
+            var h = window.innerHeight - 150;
+            
+            var x = document.getElementById("cv_viewer");
+            x.style.height = h + "px";
+            x.style.width = "100%";
+        }
 
-  <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        window.onresize = function(){
+            resizeCV();
+        }
 
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        window.onload = function(){
+            resizeCV(); // for onload 
+        }
 
-  <title>
-      cv &middot; brandon chaperon
-  </title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/hyde.css">
-  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/icons8-b-67.png">
-  <link rel="shortcut icon" href="/public/icons8-b-67.ico">
-
-  <!-- RSS -->
-  <!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml"> -->
-</head>
-  <body>
-
-    <div class="sidebar">
-      <div class="container sidebar-sticky">
-
-         <!-- <img style="border-radius: 50%;" src="../res/me.jpg" alt="Avatar">  -->
-
-        <div class="sidebar-about">
-          <h2>
-            <a href="../">
-              brandon chaperon
-            </a>
-          </h2>
-          <p class="lead">mcgill linguistics grad student</p>
-          <style type='text/css'>
-            p span.displaynone { display:none; }
-            </style>
-          <p class="lead2 unselectable" style="unicode-bidi: bidi-override; direction: rtl;">ac.lligcm.liam<span class='displaynone'>emerongi</span>@norepahc.nodnarb</p>
-        </div>
-
-        <nav class="sidebar-nav">
-          <a class="sidebar-nav-item" href="../">home</a>
-          <a class="sidebar-nav-item active" href="/cv/">cv</a>
-          <a class="sidebar-nav-item" href="/misc">misc</a>
-        </nav>
-
-        <p style="margin-top: 20px; font-size: 15px;" id="lastUpdate"></p>
-    
-        <script>
-          const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-          var xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-              let repo = JSON.parse(this.responseText);
-              let lastUpdate = new Date(repo.pushed_at);
-              let date = months[lastUpdate.getMonth()] + " " + String(lastUpdate.getDate()) + " " + String(lastUpdate.getFullYear());
-              document.getElementById("lastUpdate").innerHTML = `last update on <em>${date}</em>`;
-            }
-          };
-          xhttp.open("GET", "https://api.github.com/repos/bchaper0n/bchaper0n.github.io", true);
-          xhttp.send();
-        </script>
-
-        <!-- <p style="margin-top: 5px; font-size: 12px;">&copy; 2023. all rights reserved.</p> -->
-      </div>
-    </div>
-
-    <div class="content container">
-      <div class="page">
-        <embed id="cv_viewer" src="/docs/bchapcv.pdf" type="application/pdf">
-        <script>
-            function resizeCV(){
-                var h = window.innerHeight - 150;
-                
-                var x = document.getElementById("cv_viewer");
-                x.style.height = h + "px";
-                x.style.width = "100%";
-            }
-
-            window.onresize = function(){
-                resizeCV();
-            }
-
-            window.onload = function(){
-                resizeCV(); // for onload 
-            }
-
-        </script>
+      </script>
       <!-- <a href="/docs/bchapcv.pdf" download>download</a> -->
-      </div>
-    </div>
-
-  </body>
-</html>
+  </div>
+</div>
