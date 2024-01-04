@@ -8,7 +8,7 @@ relative_permalinks: false
 
 # Setup
 title:            brandon chaperon
-tagline:          'tagline'
+tagline:          ''
 description:      'mcgill linguistics grad student'
 url:              https://bchap.ca/
 baseurl:          /

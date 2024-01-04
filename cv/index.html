@@ -1,28 +1,26 @@
 ---
-layout: ../default
+layout: default
 title: cv
 ---
-<div class="content container">
-  <div class="page">
-    <embed id="cv_viewer" src="/docs/bchapcv.pdf" type="application/pdf">
-      <script>
-        function resizeCV(){
-            var h = window.innerHeight - 150;
-            
-            var x = document.getElementById("cv_viewer");
-            x.style.height = h + "px";
-            x.style.width = "100%";
-        }
+<div class="page">
+  <embed id="cv_viewer" src="/docs/bchapcv.pdf" type="application/pdf">
+    <script>
+      function resizeCV(){
+          var h = window.innerHeight - 150;
+          
+          var x = document.getElementById("cv_viewer");
+          x.style.height = h + "px";
+          x.style.width = "100%";
+      }
 
-        window.onresize = function(){
-            resizeCV();
-        }
+      window.onresize = function(){
+          resizeCV();
+      }
 
-        window.onload = function(){
-            resizeCV(); // for onload 
-        }
+      window.onload = function(){
+          resizeCV(); // for onload 
+      }
 
-      </script>
-      <!-- <a href="/docs/bchapcv.pdf" download>download</a> -->
-  </div>
+    </script>
+    <!-- <a href="/docs/bchapcv.pdf" download>download</a> -->
 </div>
