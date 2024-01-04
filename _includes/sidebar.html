@@ -19,10 +19,26 @@
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item" href="{{ site.url }}">home</a>
+      
+       
+      {% if page.title == "home" %}
+        <a class="sidebar-nav-item active" href="{{ site.url }}">home</a>
+      {% else %}
+        <a class="sidebar-nav-item" href="{{ site.url }}">home</a>
+      {% endif %}
 
-      <a class="sidebar-nav-item" href="/cv">cv</a>
-      <a class="sidebar-nav-item" href="/misc">misc</a>
+      {% if page.title == "cv" %}
+        <a class="sidebar-nav-item active" href="/cv">cv</a>
+      {% else %}
+        <a class="sidebar-nav-item" href="/cv">cv</a>
+      {% endif %}
+
+      {% if page.title == "home" %}
+        <a class="sidebar-nav-item active" href="/misc">misc</a>
+      {% else %}
+        <a class="sidebar-nav-item" href="/misc">misc</a>
+      {% endif %}
+
       
       <!-- TODO: latex template -->
       {% comment %}
