@@ -39,3 +39,10 @@ validation-report.json
 
 # Folders to ignore
 node_modules
+
+#latex
+*.fls
+*.synctex.gz
+*.fdb_latexmk
+*.bak*
+*.aux
