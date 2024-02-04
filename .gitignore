@@ -46,3 +46,5 @@ node_modules
 *.fdb_latexmk
 *.bak*
 *.aux
+*.bbl
+*.dvi
