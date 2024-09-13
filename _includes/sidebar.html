@@ -65,8 +65,8 @@
         if (this.readyState == 4 && this.status == 200) {
           let repo = JSON.parse(this.responseText);
           let lastUpdate = new Date(repo.pushed_at);
-          let date = months[lastUpdate.getMonth()] + " " + String(lastUpdate.getDate()) + " " + String(lastUpdate.getFullYear());
-          document.getElementById("lastUpdate").innerHTML = `last update on <em>${date}</em>`;
+          let date = months[lastUpdate.getMonth()] + " " + String(lastUpdate.getFullYear());
+          document.getElementById("lastUpdate").innerHTML = `last updated: <em>${date}</em>`;
         }
       };
       xhttp.open("GET", "https://api.github.com/repos/bchaper0n/bchaper0n.github.io", true);
