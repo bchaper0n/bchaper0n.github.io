@@ -13,6 +13,10 @@
 \usepackage[shortlabels]{enumitem}
 %\pdfcompresslevel=9
 \usepackage[pages=some]{background}
+\usepackage{datetime}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH]/\THEYEAR}
 
 \backgroundsetup{
   scale=1,angle=0,color=black,
@@ -21,7 +25,7 @@
 }
 
 
-\begin{document}{\Large \textbf{Brandon Chaperon}}
+\begin{document}{\Large \textbf{Brandon Chaperon} \hfill\normalsize {\it upd. Oct/2024} \hphantom{........................}}
 \begin{resume}
 
 	% === PERSONAL INFO ===
@@ -66,107 +70,24 @@
 			  Supervisor: \href{https://inamartinovic.com/}{Martina Martinović}}
 	\end{enumerate}
 
-	\href{https://www.vaniercollege.qc.ca/}{\textbf{Vanier College}}, Montréal, QC, Canada
+	\textbf{Vanier College}, Montréal, QC, Canada
 	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
 		\item[]  D.C.S., Computer Science Technology \hfill 2016 -- 2019
 	\end{enumerate}
 
-	\vspace{-1.2em}\rule{\textwidth}{0.4pt}
+	\vspace{-1em}\rule{\textwidth}{0.4pt}
 
 	% === RESEARCH ===
 
 	%\section{\mysidestyle Research}
 
-
-	% === WORK ===
-
-	\section{\mysidestyle Employment}
-
-	\textbf{Teaching Assistant}, 
-	%\href{https://sites.google.com/view/brendangillon}{Brendan Gillon}, 
-	McGill University
-	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
-		\item[] \href{https://www.mcgill.ca/study/2024-2025/courses/ling-360}{LING 360 - Introduction to Semantics} \hfill Fall 2024
-	\end{enumerate}
-
-	\textbf{Research Assistant}, \href{https://inamartinovic.com/}{Martina Martinović}, \href{https://mull-lab.org/}{MULL Lab} \hfill 2021 -- 2023
-	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
-		\item[] Igala (Volta-Niger) and Wolof (Atlantic) elicitation and annotation
-		      %\item[] Annotation and grant writing and \textit{Wolof} (Atlantic)
-		\item[] Build and maintain \href{https://wiki.mull-lab.org/Igala/}{Igala Wiki}, \href{https://mull-lab.org/}{MULL Lab Website}, and \href{https://github.com/dativebase/dativerf}{Dative}
-	\end{enumerate}%\vspace{-0.8em}\rule{\textwidth}{0.4pt}
-
-	\begin{comment}
-	\textbf{Full Stack and Mobile Developer}, \href{https://playmind.com/}{PLAYMIND}, Montréal \hfill Mar -- Aug 2021
-	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
-		\item[] Developed~\href{https://playbox.games/\#home}{
-			      PLAYBOX online management portal and Android App}
-	\end{enumerate}
-
-	\textbf{Freelance Programmer}, Montréal \hfill 2019 -- 2020
-	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
-		\item[] Web Development and Python tutoring
-	\end{enumerate}
-
-	\textbf{Junior Developer}, \href{https://gls-canada.com/en/dicom/corp/home}{GLS (\textit{fka} Dicom)}, Montréal \hfill Jan -- May 2019
-	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
-		\item[] Worked on \href{https://gls-canada.com/en/dicom/about-us/news/dicom-launches-smart4-shipping}{smart4 shipping platform} back-end
-	\end{enumerate}
-	\end{comment}
-
-	\vspace{-0.9em}\rule{\textwidth}{0.4pt}
-
-
-	% === FIELDWORK ===
-
-	\section{\mysidestyle Fieldwork}
-
-	\textbf{Igala (Yoruboid; Volta-Niger)}, remotely (Nigeria \& UK) \hfill since May 2021
-	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
-		\item[] Supervision by \href{https://inamartinovic.com/}{Martina Martinović}
-	\end{enumerate}
-
-
-	\textbf{Wolof (Senegambian; Atlantic)}, Saint-Louis \& Dakar, Senegal %and remotely
-	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
-		\item[] M.A. thesis fieldwork \hfill Jun -- Jul, 2024
-		%\item[] Remote data elicitation \hfill Feb -- April, 2024
-		\item[] Research assistant for \href{https://inamartinovic.com/}{Martina Martinović} \hfill Apr -- May, 2023
-	\end{enumerate}
-
-	\textbf{Kirundi (JD.62; Great Lakes Bantu)}, Montréal \hfill Jan -- Jun, 2022
-	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
-		\item[] As part of \href{https://jessica.lingspace.org/}{Jessica Coon}'s Field Methods class (\href{https://www.mcgill.ca/study/2021-2022/courses/ling-415}{LING 415})
-		      %\item[] Taught and supervised by 
-	\end{enumerate}
-
-	\vspace{-0.9em}\rule{\textwidth}{0.4pt}
-
-	% === AWARDS ===
-
-	\section{\mysidestyle Awards}
-
-	
-	{\textbf{Graduate Research Enhancement and Travel (GREAT) Award}. \textit{Travel funding for \href{https://parissnag.com/conf}{SNAG 2024 Workshop} in Paris}. Funded by the Faculty of Arts at McGill University via the Department of Linguistics. September 5-6 2024. \$750 (CAD).}
-
-	{\textbf{Canada Graduate Scholarship - Master's (CGS-M)}. \textit{Left-peripheral properties of Negation in Niger-Congo}. Funded by the Social Sciences and Humanities Research Council (SSHRC). 2024--2025 (12 months). \$27,000 (CAD).}
-	
-	{\textbf{Graduate Mobility Award (GMA)}. \textit{Travel funding for 5 weeks of Thesis-related fieldwork in Senegal}. Funded by the Government of Quebec via McGill University. %Supervised by \href{https://inamartinovic.com/}{Martina Martinović}. 
-	Summer 2024. \$1,800 (CAD).}	
-	
-	{\textbf{Undergraduate Arts Research Internship Award (ARIA)}. \href{https://www.mcgill.ca/arts-internships/files/arts-internships/brandon_chaperon.pdf}{\textit{Igala Sentence-Final Particles at the edge of \textit{v}P}}. Funded by the Faculty of Arts at McGill University. %Supervised by \href{https://inamartinovic.com/}{Martina Martinović}. 
-	Summer 2022. \$5,000 (CAD).}
-
-	\vspace{-0.7em}\rule{\textwidth}{0.4pt}
-
+	\vspace{-0.5em}
 
 	% === PAPERS ===
 
-	\section{\mysidestyle Proceedings\\Papers}
+	\section{\mysidestyle Papers}
 
 	 {\textbf{Chaperon, B}. (to appear). A Negative Alternation: Negation Head Movement Allomorphy in Igala. \textit{Selected papers from the 54th Annual Conference on African Linguistics}. Contemporary African Linguistics: Language Science Press, 10.}
-
-	 \newpage
 
 	 {\textbf{Chaperon, B}. (2023). \href{https://twpl.library.utoronto.ca/index.php/twpl/article/view/39257}{Unravelling the `not': left peripheral blocking of negation in Kirundi}. \textit{Toronto Working Papers in Linguistics}, 46(1).}%\url{https://doi.org/?...}
 
@@ -206,6 +127,65 @@
 
 	\vspace{-0.6em}\rule{\textwidth}{0.4pt}
 
+		% === AWARDS ===
+
+		\section{\mysidestyle Awards}
+
+	
+		{\textbf{Graduate Research Enhancement and Travel (GREAT) Award}. \textit{Travel funding for \href{https://parissnag.com/conf}{SNAG 2024 Workshop} in Paris}. Funded by the Faculty of Arts at McGill University via the Department of Linguistics. September 5-6 2024. \$750 (CAD).}
+	
+		{\textbf{Canada Graduate Scholarship - Master's (CGS-M)}. \textit{Left-peripheral properties of Negation in Niger-Congo}. Funded by the Social Sciences and Humanities Research Council (SSHRC). 2024--2025 (12 months). \$27,000 (CAD).}
+		
+		{\textbf{Graduate Mobility Award (GMA)}. \textit{Travel funding for 5 weeks of Thesis-related fieldwork in Senegal}. Funded by the Government of Quebec via McGill University. %Supervised by \href{https://inamartinovic.com/}{Martina Martinović}. 
+		Summer 2024. \$1,800 (CAD).}	
+		
+		{\textbf{Undergraduate Arts Research Internship Award (ARIA)}. \href{https://www.mcgill.ca/arts-internships/files/arts-internships/brandon_chaperon.pdf}{\textit{Igala Sentence-Final Particles at the edge of \textit{v}P}}. Funded by the Faculty of Arts at McGill University. %Supervised by \href{https://inamartinovic.com/}{Martina Martinović}. 
+		Summer 2022. \$5,000 (CAD).}
+	
+		\vspace{-0.7em}\rule{\textwidth}{0.4pt}
+
+	% === WORK ===
+
+	\vspace{-0.5em}
+
+	\section{\mysidestyle Employment}
+
+	\textbf{Teaching Assistant}, 
+	%\href{https://sites.google.com/view/brendangillon}{Brendan Gillon}, 
+	McGill University
+	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
+		\item[] LING 360 - Introduction to Semantics \hfill Fall 2024
+	\end{enumerate}
+
+	\newpage
+
+	\textbf{Research Assistant}, \href{https://inamartinovic.com/}{Martina Martinović}, \href{https://mull-lab.org/}{MULL Lab} \hfill 2021 -- 2023
+	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
+		\item[] Igala (Volta-Niger) and Wolof (Atlantic) elicitation and annotation
+		      %\item[] Annotation and grant writing and \textit{Wolof} (Atlantic)
+		\item[] Build and maintain \href{https://wiki.mull-lab.org/Igala/}{Igala Wiki} and MULL Lab Website%, and \href{https://github.com/dativebase/dativerf}{Dative}
+	\end{enumerate}%\vspace{-0.8em}\rule{\textwidth}{0.4pt}
+
+	\begin{comment}
+	\textbf{Full Stack and Mobile Developer}, \href{https://playmind.com/}{PLAYMIND}, Montréal \hfill Mar -- Aug 2021
+	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
+		\item[] Developed~\href{https://playbox.games/\#home}{
+			      PLAYBOX online management portal and Android App}
+	\end{enumerate}
+
+	\textbf{Freelance Programmer}, Montréal \hfill 2019 -- 2020
+	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
+		\item[] Web Development and Python tutoring
+	\end{enumerate}
+
+	\textbf{Junior Developer}, \href{https://gls-canada.com/en/dicom/corp/home}{GLS (\textit{fka} Dicom)}, Montréal \hfill Jan -- May 2019
+	\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
+		\item[] Worked on \href{https://gls-canada.com/en/dicom/about-us/news/dicom-launches-smart4-shipping}{smart4 shipping platform} back-end
+	\end{enumerate}
+	\end{comment}
+
+	\vspace{-0.9em}\rule{\textwidth}{0.4pt}
+
 	% === TEACHING ===
 
 	\begin{comment}
@@ -217,6 +197,31 @@
 
 	\vspace{-0.6em}\rule{\textwidth}{0.4pt}
 	\end{comment}
+
+		% === FIELDWORK ===
+
+		\section{\mysidestyle Fieldwork}
+
+		\textbf{Igala (Yoruboid; Volta-Niger)}, remotely (Nigeria \& UK) \hfill since May 2021
+		\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
+			\item[] Supervision by \href{https://inamartinovic.com/}{Martina Martinović}
+		\end{enumerate}
+	
+	
+		\textbf{Wolof (Senegambian; Atlantic)}, Saint-Louis \& Dakar, Senegal %and remotely
+		\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
+			\item[] M.A. thesis fieldwork \hfill Jun -- Jul, 2024
+			%\item[] Remote data elicitation \hfill Feb -- April, 2024
+			\item[] Research assistant for \href{https://inamartinovic.com/}{Martina Martinović} \hfill Apr -- May, 2023
+		\end{enumerate}
+	
+		\textbf{Kirundi (JD.62; Great Lakes Bantu)}, Montréal \hfill Jan -- Jun, 2022
+		\begin{enumerate}[-, leftmargin=1em, topsep=0.5pt]
+			\item[] As part of \href{https://jessica.lingspace.org/}{Jessica Coon}'s Field Methods class (\href{https://www.mcgill.ca/study/2021-2022/courses/ling-415}{LING 415})
+				  %\item[] Taught and supervised by 
+		\end{enumerate}
+	
+		\vspace{-0.9em}\rule{\textwidth}{0.4pt}
 
 	% === COMMUNITY ===
 
