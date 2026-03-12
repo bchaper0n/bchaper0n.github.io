@@ -7,6 +7,7 @@
 \usepackage{graphicx,wrapfig}
 \usepackage{url}
 \usepackage{comment}
+\usepackage{multicol}
 \usepackage{CJKutf8}
 \usepackage[dvipsnames]{xcolor}		
 \usepackage[colorlinks=true, pdfstartview=FitV, allcolors=Blue]{hyperref}
@@ -29,17 +30,26 @@
 \begin{resume}
 
 	% === PERSONAL INFO ===
+	\vspace{-0.5em}
 
-	\section{\mysidestyle Email \vspace{0.3em}\\Website}
-	\href{mailto:brandon.chaperon@mail.mcgill.ca}{brandon.chaperon@mail.mcgill.ca}\vspace{0.3em}\\
-	\href{https://bchaper0n.github.io/}{bchap.ca}
+	\section{\mysidestyle Mail \& links}
+	
+	\vspace{-0.01em}
+	\begin{multicols}{3}
+
+		\faAt{}\hspace{0.1em} \href{mailto:brandon.chaperon@mail.mcgill.ca}{brandon.chaperon@mail.mcgill.ca}%\vspace{0.3em}
+
+		\begin{center}\faChain{}\hspace{0.1em} \href{https://bchap.ca/}{bchap.ca}\end{center}
+
+		\faGithub{}\hspace{0.1em} \href{https://github.com/bchaper0n}{bchaper0n}
+	\end{multicols}
 
 	% === OBJECTIVE ===
 
 	%    \section{\mysidestyle Professional Objective}
 	%    ...
 
-	\vspace{-1em}\rule{\columnwidth}{0.4pt}
+	\vspace{-2.3em}\rule{\columnwidth}{0.4pt}
 
 	% === EDUCATION ===
 
